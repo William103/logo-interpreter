@@ -23,7 +23,6 @@ pub fn main() {
  
     let mut canvas = window.into_canvas().present_vsync().build().unwrap();
 
-    // let code = "fd 30 rt 120 fd 30 rt 120 fd 30";
     let code = "rp 36 [lt 10 pu fd 1 pd rp 120 [fd 2 rt 3]]";
     let mut lex = Token::lexer(code);
     let block = parse(&mut lex, false).expect("Error in parsing");
